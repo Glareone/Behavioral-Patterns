@@ -20,15 +20,15 @@ namespace Mediator
         /// <value>
         ///     The dictionary of executors.
         /// </value>
-        private static readonly Dictionary<string, List<Executor>> ExecutorsCollection =
-            new Dictionary<string, List<Executor>>();
+        private static readonly Dictionary<string, List<IExecutor>> ExecutorsCollection =
+            new Dictionary<string, List<IExecutor>>();
 
         /// <summary>
         ///     Adds the executor.
         /// </summary>
         /// <param name="nameOfConcreteMediator">The name of concrete mediator.</param>
         /// <param name="collectionOfExecutors">The collection of executors.</param>
-        public static void AddExecutors(string nameOfConcreteMediator, List<Executor> collectionOfExecutors)
+        public static void AddExecutors(string nameOfConcreteMediator, List<IExecutor> collectionOfExecutors)
         {
             if (ExecutorsCollection.ContainsKey(nameOfConcreteMediator)) return;
 
@@ -40,7 +40,7 @@ namespace Mediator
         /// </summary>
         /// <param name="nameOfConcreteMediator">The name of concrete mediator.</param>
         /// <returns>collection of executors</returns>
-        public static List<Executor> GetExecutors(string nameOfConcreteMediator)
+        public static List<IExecutor> GetExecutors(string nameOfConcreteMediator)
         {
             return ExecutorsCollection.Where(ec => ec.Key == nameOfConcreteMediator).Select(ec => ec.Value)
                 .FirstOrDefault();

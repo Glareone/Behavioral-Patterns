@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Mediator
 {
@@ -13,10 +12,10 @@ namespace Mediator
             var executor3 = new Executor("Hell", @"Group of usage 1", "Executor Hell repairs his apartments");
             var executor4 = new Executor("Arthur", @"Group of usage 2", "Executor Arthur establishes company");
 
-            var executors = new List<Executor> { executor1, executor2, executor3 };
+            var executors = new List<IExecutor> { executor1, executor2, executor3 };
 
             Mediator.AddExecutors("Mad_Executors", executors);
-            Mediator.AddExecutors("Beer_Executors", new List<Executor> { executor4 });
+            Mediator.AddExecutors("Beer_Executors", new List<IExecutor> { executor4 });
 
             Mediator.DoByAllExecutors("Mad_Executors");
             Console.WriteLine($"amoung of executors is {Mediator.GetExecutors("Mad_Executors").Count}");

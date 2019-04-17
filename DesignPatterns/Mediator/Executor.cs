@@ -6,7 +6,7 @@ namespace Mediator
     ///     Concrete executor
     ///     Конкретный исполнитель
     /// </summary>
-    public class Executor
+    public class Executor: IExecutor
     {
         public Executor(string executorName, string executorGroup, string execute)
         {
