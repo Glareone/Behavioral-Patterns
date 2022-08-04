@@ -2,6 +2,8 @@
 Holub's patterns and explanation using Game of Life and SQL interpreter [Hhttps://holub.com/patterns](https://holub.com/patterns/)  
 Holub's Oreilly classes: [http://shop.oreilly.com/product/0636920043942.do](http://shop.oreilly.com/product/0636920043942.do)  
 
+![image](https://user-images.githubusercontent.com/4239376/182931885-ffdf2b65-cb46-42a6-918c-951c3d721761.png)
+
 
 # Contents
 * Chain of Responsibility pattern with description: [Chain of Responsibility](https://github.com/Glareone/Design-Patterns/tree/master/DesignPatterns/ChainOfResponsibility)  
